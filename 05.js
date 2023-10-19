@@ -14,7 +14,10 @@ function pluck(array, propiedad) {
   // Pista: es una buena oportunidad para usar map.
 
   // Tu código acá:
-
+  var solution = array.map (function (i) {
+    return i[propiedad];
+  });
+  return solution;
 }
 
 // No modifiques nada debajo de esta linea //

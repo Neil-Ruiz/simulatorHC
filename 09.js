@@ -5,9 +5,9 @@
   No comentar la funcion 
 */
 function filtrar(funcion) {
-  // Escribi una función filtrar en el prototipo de Arrays,
-  // que recibe una funcion (callback) que devuelve true o false.
-  // filtrar los elementos de ese arreglo en base al resultado de esa funcion
+  // Escribi una función filtrar en el prototipo de Arrays, OK
+  // que recibe una funcion (callback) que devuelve true o false. OK
+  // filtrar los elementos de ese arreglo en base al resultado de esa funcion OK
   // comparadora, devolver un nuevo arreglo con los elementos filtrados.
   // NO USAR LA FUNCION FILTER DE LOS ARREGLOS.
   // ej:
@@ -24,8 +24,17 @@ function filtrar(funcion) {
   // productos.filtrar(function(p) {
   //   return p.price >= 50;
   // }) => [{price: 100, name:'tv'}]
-
+  Array.prototype.filtrar = function (funcion) {
+    var newArray = [];
+    for (var i = 0 ; i < this.length ; i++) {
+      if (funcion(this[i])) {
+        newArray.push(this[i]);
+      }
+    }
+    return(newArray);
+  }
 };
+  
 
 // No modifiques nada debajo de esta linea //
 
